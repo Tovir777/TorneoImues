@@ -1,0 +1,70 @@
+---
+---
+
+<header class="fixed top-0 w-full z-50 bg-cyber-black/80 backdrop-blur-md border-b border-neon-purple/30">
+  <nav class="container mx-auto px-4 py-4">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 bg-gradient-to-br from-neon-purple to-neon-cyan rounded-lg flex items-center justify-center">
+          <span class="text-white font-press-start text-xs">⚽</span>
+        </div>
+        <div class="text-sm">
+          <div class="text-neon-purple font-bold">BABY FÚTBOL</div>
+          <div class="text-neon-cyan text-xs">IMUÉS 2025</div>
+        </div>
+      </div>
+      
+      <div class="hidden md:flex space-x-6">
+        <a href="/" class="nav-link">Inicio</a>
+        <a href="/equipos" class="nav-link">Equipos</a>
+        <a href="/grupos" class="nav-link">Grupos</a>
+        <a href="/partidos" class="nav-link">Partidos</a>
+        <a href="/tabla" class="nav-link">Tabla</a>
+        <a href="/resultados" class="nav-link">Resultados</a>
+        <a href="/premios" class="nav-link">Premios</a>
+        <a href="/galeria" class="nav-link">Galería</a>
+      </div>
+      
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="text-neon-cyan hover:text-neon-purple transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden mt-4 space-y-2 hidden">
+      <a href="/" class="block nav-link">Inicio</a>
+      <a href="/equipos" class="block nav-link">Equipos</a>
+      <a href="/grupos" class="block nav-link">Grupos</a>
+      <a href="/partidos" class="block nav-link">Partidos</a>
+      <a href="/tabla" class="block nav-link">Tabla</a>
+      <a href="/resultados" class="block nav-link">Resultados</a>
+      <a href="/premios" class="block nav-link">Premios</a>
+      <a href="/galeria" class="block nav-link">Galería</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .nav-link {
+    @apply text-white hover:text-neon-cyan transition-all duration-300 text-sm font-medium;
+    @apply hover:drop-shadow-[0_0_8px_rgba(0,255,255,0.8)];
+  }
+  
+  .nav-link:hover {
+    text-shadow: 0 0 10px #00ffff;
+  }
+</style>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

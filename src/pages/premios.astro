@@ -1,0 +1,129 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CyberCard from '../components/CyberCard.astro';
+---
+
+<Layout 
+  title="Premios y Reconocimientos - Baby Fútbol Imués 2025 | Trofeos y Medallas"
+  description="Premios del Baby Fútbol Imués 2025. Trofeos para campeón, subcampeón, goleador, valla menos vencida y reconocimientos especiales del torneo infantil."
+  url="https://baby-futbol-imues2025.vercel.app/premios"
+>
+  <Header />
+  
+  <main class="pt-24 pb-12">
+    <section class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+        <span class="text-neon-cyan">🏆</span> Premios y Reconocimientos
+      </h1>
+      
+      <p class="text-xl text-center text-neon-purple mb-12">
+        Premios para equipos y jugadores destacados del torneo
+      </p>
+      
+      <div class="space-y-12">
+        <!-- Premios por Equipos -->
+        <div>
+          <h2 class="text-3xl font-bold text-neon-purple mb-8 text-center">
+            🏆 Premios por Equipos
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <CyberCard title="🥇 Campeón" gradient={true} class="prize-card champion">
+              <div class="text-center space-y-4">
+                <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-3xl">🏆</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="text-white font-bold">Trofeo de Campeón</div>
+                  <div class="text-sm text-gray-300">Medallas </div>                  
+                  <div class="text-neon-cyan font-bold">Clasificación al Zonal Nacional</div>
+                </div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="🥈 Subcampeón" gradient={true} class="prize-card">
+              <div class="text-center space-y-4">
+                <div class="w-20 h-20 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-3xl">🥈</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="text-white font-bold">Trofeo Subcampeón</div>
+                  <div class="text-sm text-gray-300">Medallas </div>                  
+                  <div class="text-neon-cyan font-bold">Clasificación al Zonal Nacional</div>
+                </div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="🥉 Tercer Lugar" gradient={true} class="prize-card">
+              <div class="text-center space-y-4">
+                <div class="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-3xl">🥉</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="text-white font-bold">Trofeo Tercer Lugar</div>
+                  <div class="text-sm text-gray-300">Medallas</div>                  
+                </div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="4️⃣ Cuarto Lugar" gradient={true} class="prize-card">
+              <div class="text-center space-y-4">
+                <div class="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-3xl">4️⃣</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="text-white font-bold">Trofeo Cuarto Lugar</div>
+                  <div class="text-sm text-gray-300">Medallas</div>                  
+                </div>
+              </div>
+            </CyberCard>
+          </div>
+        </div>
+        
+        <!-- Premios Individuales -->
+        <div>
+          <h2 class="text-3xl font-bold text-neon-cyan mb-8 text-center">
+            🏅 Premios Individuales
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <CyberCard title="⚽ Goleador del Torneo" gradient={true} class="prize-card">
+              <div class="text-center space-y-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-neon-purple to-neon-cyan rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-2xl">⚽</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="text-white font-bold">Trofeo Goleador</div>
+                </div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="🥅 Valla Menos Vencida" gradient={true} class="prize-card">
+              <div class="text-center space-y-4">
+                <div class="w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-2xl">🥅</span>
+                </div>
+                <div class="space-y-2">
+                  <div class="text-white font-bold">Trofeo Mejor Portero</div>
+                </div>
+              </div>
+            </CyberCard>          
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .prize-card {
+    @apply hover:shadow-[0_0_25px_rgba(255,0,204,0.4)];
+  }
+  
+  .champion {
+    @apply hover:shadow-[0_0_30px_rgba(255,215,0,0.5)];
+  }
+</style>

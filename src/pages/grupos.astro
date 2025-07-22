@@ -1,0 +1,120 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CyberCard from '../components/CyberCard.astro';
+import grupos from '../data/grupos.json';
+---
+
+<Layout 
+  title="Grupos del Torneo - Baby Fútbol Imués 2025 | Fase de Grupos A, B y C"
+  description="Fase de grupos del Baby Fútbol Imués 2025. Distribución de los 12 equipos en 3 grupos de 4 equipos cada uno. Clasificación a cuartos de final."
+  url="https://baby-futbol-imues2025.vercel.app/grupos"
+>
+  <Header />
+  
+  <main class="pt-24 pb-12">
+    <section class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+        <span class="text-neon-cyan">🏁</span> Grupos del Torneo
+      </h1>
+      
+      <p class="text-xl text-center text-neon-purple mb-12">
+        Fase de grupos - 3 grupos de 4 equipos cada uno
+      </p>
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <!-- Grupo A -->
+        <CyberCard title="Grupo A" gradient={true} class="group-card">
+          <div class="space-y-4">
+            {grupos.grupoA.equipos.map((equipo, index) => (
+              <div class="flex items-center space-x-3 p-3 bg-cyber-dark/50 rounded-lg border border-neon-purple/20">
+                <div class="w-8 h-8 bg-gradient-to-br from-neon-purple to-neon-cyan rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-sm">{index + 1}</span>
+                </div>
+                <div class="flex-1">
+                  <div class="text-white font-medium">{equipo.nombre}</div>
+                  <div class="text-gray-400 text-sm">{equipo.ciudad}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CyberCard>
+        
+        <!-- Grupo B -->
+        <CyberCard title="Grupo B" gradient={true} class="group-card">
+          <div class="space-y-4">
+            {grupos.grupoB.equipos.map((equipo, index) => (
+              <div class="flex items-center space-x-3 p-3 bg-cyber-dark/50 rounded-lg border border-neon-cyan/20">
+                <div class="w-8 h-8 bg-gradient-to-br from-neon-cyan to-neon-blue rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-sm">{index + 1}</span>
+                </div>
+                <div class="flex-1">
+                  <div class="text-white font-medium">{equipo.nombre}</div>
+                  <div class="text-gray-400 text-sm">{equipo.ciudad}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CyberCard>
+        
+        <!-- Grupo C -->
+        <CyberCard title="Grupo C" gradient={true} class="group-card">
+          <div class="space-y-4">
+            {grupos.grupoC.equipos.map((equipo, index) => (
+              <div class="flex items-center space-x-3 p-3 bg-cyber-dark/50 rounded-lg border border-neon-purple/20">
+                <div class="w-8 h-8 bg-gradient-to-br from-neon-purple to-neon-cyan rounded-full flex items-center justify-center">
+                  <span class="text-white font-bold text-sm">{index + 1}</span>
+                </div>
+                <div class="flex-1">
+                  <div class="text-white font-medium">{equipo.nombre}</div>
+                  <div class="text-gray-400 text-sm">{equipo.ciudad}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </CyberCard>
+      </div>
+      
+      <!-- Qualification Info -->
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-center text-neon-cyan mb-8">
+          📋 Clasificación a Siguientes Fases
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <CyberCard title="Fase de Grupos">
+            <ul class="space-y-2 text-white">
+              <li>• Cada equipo juega contra todos los de su grupo</li>
+              <li>• 3 partidos por equipo en fase de grupos</li>
+              <li>• Sistema de todos contra todos</li>
+              <li>• Puntuación: 3 pts victoria, 1 pt empate</li>
+            </ul>
+          </CyberCard>
+          
+          <CyberCard title="Clasificación">
+            <ul class="space-y-2 text-white">
+              <li>• Los 8 mejores clasifican</li>
+              <li>• Total: 8 equipos a cuartos de final</li>
+              <li>• Criterios: Puntos, Juego limpio,DG, GF</li>              
+            </ul>
+          </CyberCard>
+          
+          <CyberCard title="Eliminatorias">
+            <ul class="space-y-2 text-white">
+              <li>• Cuartos de final: 8 equipos</li>
+              <li>• Semifinales: 4 equipos</li>
+              <li>• 3 y 4 puestos: 2 equipos</li>
+              <li>• 1 y 2 puestos: 2 equipos</li>
+            </ul>
+          </CyberCard>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .group-card {
+    @apply hover:shadow-[0_0_25px_rgba(0,255,255,0.4)];
+  }
+</style>

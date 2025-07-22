@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CyberCard from '../components/CyberCard.astro';
+import PhotoSwipeGallery from '../components/PhotoSwipeGallery.astro';
+import galeriaData from '../data/galeria.json';
+
+// Agrupar imágenes por categoría para estadísticas
+const categorias = galeriaData.reduce((acc, img) => {
+  acc[img.categoria] = (acc[img.categoria] || 0) + 1;
+  return acc;
+}, {});
+
+// Obtener imágenes más recientes
+const imagenesRecientes = galeriaData
+  .sort((a, b) => new Date(b.fecha).getTime() - new Date(a.fecha).getTime())
+  .slice(0, 6);
+---
+
+<Layout 
+  title="Galería de Fotos - Baby Fútbol Imués 2025 | Momentos del Torneo"
+  description="Galería fotográfica del Baby Fútbol Imués 2025. Mejores momentos, jugadas destacadas y celebraciones del torneo de fútbol infantil en Nariño."
+  url="https://baby-futbol-imues2025.vercel.app/galeria"
+>
+  <Header />
+  
+  <main class="pt-24 pb-12">
+    <section class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+        <span class="text-neon-cyan">📸</span> Galería del Torneo
+      </h1>
+      
+      <p class="text-xl text-center text-neon-purple mb-12">
+        Momentos destacados del II Zonal Baby Fútbol Masculino 2025
+      </p>
+      
+      <!-- Galería principal con PhotoSwipe -->
+      <CyberCard title="Galería Completa" gradient={true} class="mb-12">
+        <PhotoSwipeGallery images={galeriaData} />
+      </CyberCard>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  /* Estilos adicionales para la página de galería */
+  .container {
+    @apply max-w-7xl;
+  }
+</style>

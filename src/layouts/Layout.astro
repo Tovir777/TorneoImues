@@ -1,0 +1,132 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  url?: string;
+}
+
+const { 
+  title, 
+  description = "II Zonal Baby Fútbol Masculino 2025 - Clasificatorio Sur Occidente Categoría 2013-2014. Torneo del 22 al 27 de julio en Imués, Nariño. Organiza Fundación Alianza Sureña.",
+  image = "https://baby-futbol-imues2025.vercel.app/og-image.jpg",
+  url = "https://baby-futbol-imues2025.vercel.app"
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, url);
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content={description} />
+    <meta name="keywords" content="baby fútbol, fútbol infantil, torneo, Imués, Nariño, Colombia, categoría 2013-2014, zonal sur occidente, fundación alianza sureña, deporte infantil, campeonato" />
+    <meta name="author" content="Fundación Alianza Sureña" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Baby Fútbol Imués 2025" />
+    <meta property="og:locale" content="es_CO" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={canonicalURL} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={image} />
+    
+    <!-- WhatsApp -->
+    <meta property="og:image:alt" content="Baby Fútbol Imués 2025 - Torneo de fútbol infantil en Nariño" />
+    
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsEvent",
+        "name": "II Zonal Baby Fútbol Masculino 2025",
+        "description": "Torneo de fútbol infantil categoría 2013-2014, clasificatorio al Zonal Nacional Sur Occidente",
+        "startDate": "2025-07-22",
+        "endDate": "2025-07-27",
+        "location": {
+          "@type": "Place",
+          "name": "Complejo Deportivo Municipal de Imués",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Imués",
+            "addressRegion": "Nariño",
+            "addressCountry": "Colombia"
+          }
+        },
+        "organizer": {
+          "@type": "Organization",
+          "name": "Fundación Alianza Sureña",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+57-318-377-3718",
+            "contactType": "Coordinador",
+            "name": "Óscar Armando Bolaños Castro"
+          }
+        },
+        "sport": "Fútbol",
+        "competitor": [
+          "Alianza Sureña FC",
+          "Deportivo Pedregal",
+          "Atlético Nariño",
+          "Real Ipiales",
+          "Sporting Tumaco",
+          "CD La Unión",
+          "Samaniego FC",
+          "Deportivo Barbacoas",
+          "Chachagüí United",
+          "Ricaurte FC",
+          "Academia Pupiales",
+          "Deportivo Cumbal"
+        ],
+        "url": "https://baby-futbol-imues2025.vercel.app",
+        "image": "https://baby-futbol-imues2025.vercel.app/og-image.jpg"
+      }
+    </script>
+  </head>
+  <body class="bg-cyber-black text-white font-orbitron overflow-x-hidden">
+    <!-- Cyberpunk Grid Background -->
+    <div class="fixed inset-0 pointer-events-none z-0">
+      <div class="absolute inset-0 bg-gradient-to-br from-cyber-dark via-cyber-black to-cyber-dark opacity-90"></div>
+      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiPgo8cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmYwMGNjIiBzdHJva2Utd2lkdGg9IjAuNSIgb3BhY2l0eT0iMC4yIi8+CjwvcGF0dGVybj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIiAvPgo8L3N2Zz4=')] opacity-30"></div>
+    </div>
+    
+    <div class="relative z-10">
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #121212 0%, #1e1e2f 50%, #121212 100%);
+  }
+</style>

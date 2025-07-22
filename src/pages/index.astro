@@ -1,0 +1,200 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CyberCard from '../components/CyberCard.astro';
+---
+
+<Layout 
+  title="Baby Fútbol Imués 2025 - Torneo Infantil Nariño | Clasificatorio Sur Occidente"
+  description="II Zonal Baby Fútbol Masculino 2025 en Imués, Nariño. Torneo infantil categoría 2013-2014 del 22 al 27 de julio. Clasificatorio al Zonal Nacional Sur Occidente. Organiza Fundación Alianza Sureña."
+  url="https://baby-futbol-imues2025.vercel.app/"
+>
+  <Header />
+  
+  <main class="pt-24 pb-12">
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 text-center mb-16">
+      <h1 class="hero-title text-4xl md:text-6xl font-bold mb-4">
+        BABY FÚTBOL IMUÉS 2025
+      </h1>
+      <p class="hero-subtitle text-xl md:text-2xl mb-8 text-neon-cyan">
+        Clasificatorio Sur Occidente - Categoría 2013-2014
+      </p>
+      
+      <div class="flex flex-col md:flex-row gap-4 justify-center items-center text-lg">
+        <div class="flex items-center space-x-2">
+          <span class="text-neon-purple">🗓️</span>
+          <span>Julio 22 al 27, 2025</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-neon-cyan">📍</span>
+          <span>Imués (Pedregal) - Nariño</span>
+        </div>
+        <div class="flex items-center space-x-2">
+          <span class="text-neon-purple">👦</span>
+          <span>Categoría 2013-2014</span>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Main Info Cards -->
+    <section class="container mx-auto px-4 mb-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Lugar del Evento -->
+        <CyberCard title="Lugar del Evento" gradient={true}>
+          <div class="space-y-2">
+            <p class="text-white"><strong>Ciudad:</strong> Imués (Pedregal)</p>
+            <p class="text-white"><strong>Departamento:</strong> Nariño, Colombia</p>
+            <p class="text-white"><strong>Instalaciones:</strong> Complejo Deportivo Municipal</p>
+            <p class="text-neon-cyan text-sm">🏟️ Canchas de fútbol sintético</p>
+          </div>
+        </CyberCard>
+        
+        <!-- Fechas del Torneo -->
+        <CyberCard title="Fechas del Torneo" gradient={true}>
+          <div class="space-y-2">
+            <p class="text-white"><strong>Inicio:</strong> Martes 22 de Julio</p>
+            <p class="text-white"><strong>Final:</strong> Domingo 27 de Julio</p>
+            <p class="text-white"><strong>Duración:</strong> 6 días</p>            
+          </div>
+        </CyberCard>
+        
+        <!-- Fundación Organizadora -->
+        <CyberCard title="Fundación Organizadora" gradient={true}>
+          <div class="space-y-2">
+            <p class="text-white"><strong>Organiza:</strong> Fundación Alianza Sureña</p>
+            <p class="text-white"><strong>Coordinador:</strong> Óscar Armando Bolaños Castro</p>
+            <p class="text-neon-cyan">📱 WhatsApp: 3183773718</p>
+            <p class="text-sm text-gray-300">Contacto directo para consultas</p>
+          </div>
+        </CyberCard>
+      </div>
+    </section>
+    
+    <!-- Tournament Info -->
+    <section class="container mx-auto px-4 mb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- Información del Torneo -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-neon-purple mb-6">
+            🏆 Información del Torneo
+          </h2>
+          
+          <CyberCard title="Clasificatorio" subtitle="Zonal Nacional Sur Occidente">
+            <p class="text-white mb-2">Este torneo clasifica al <strong>Zonal Nacional Sur Occidente</strong>, donde se definirán los equipos que avanzarán a la fase nacional.</p>
+            <p class="text-neon-cyan text-sm">🎯 Los mejores equipos avanzarán a la siguiente fase</p>
+          </CyberCard>
+          
+          <CyberCard title="Categoría 2013-2014">
+            <p class="text-white mb-2">Jugadores nacidos entre los años <strong>2013 y 2014</strong></p>
+            <p class="text-neon-cyan text-sm">👦 Edad aproximada: 10-12 años</p>
+          </CyberCard>
+        </div>
+        
+        <!-- Estadísticas -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-neon-cyan mb-6">
+            📊 Estadísticas del Torneo
+          </h2>
+          
+          <div class="grid grid-cols-2 gap-4">
+            <div class="text-center p-4 bg-cyber-gray/30 rounded-lg border border-neon-purple/30">
+              <div class="text-2xl font-bold text-neon-purple">12</div>
+              <div class="text-sm text-gray-300">Equipos Participantes</div>
+            </div>
+            
+            <div class="text-center p-4 bg-cyber-gray/30 rounded-lg border border-neon-cyan/30">
+              <div class="text-2xl font-bold text-neon-cyan">3</div>
+              <div class="text-sm text-gray-300">Grupos</div>
+            </div>
+            
+            <div class="text-center p-4 bg-cyber-gray/30 rounded-lg border border-neon-purple/30">
+              <div class="text-2xl font-bold text-neon-purple">26</div>
+              <div class="text-sm text-gray-300">Partidos</div>
+            </div>
+            
+            <div class="text-center p-4 bg-cyber-gray/30 rounded-lg border border-neon-cyan/30">
+              <div class="text-2xl font-bold text-neon-cyan">6</div>
+              <div class="text-sm text-gray-300">Días de Competición</div>
+            </div>
+          </div>
+          
+          <CyberCard title="Modalidad de Juego">
+            <ul class="space-y-2 text-white">
+              <li>🏆 <strong>Fase de grupos:</strong> 3 grupos de 4 equipos</li>
+              <li>🎯 <strong>Clasificación:</strong> Los mejores de cada grupo</li>
+              <li>⚽ <strong>Eliminatorias:</strong> Cuartos, semifinales y final</li>
+              <li>🥇 <strong>Premios:</strong> Trofeos y medallas para los primeros 4 lugares</li>
+            </ul>
+          </CyberCard>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Quick Links -->
+    <section class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-neon-purple">
+        🔗 Acceso Rápido
+      </h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <a href="/equipos" class="quick-link">
+          <div class="text-2xl mb-2">⚽</div>
+          <div class="text-sm">Equipos</div>
+        </a>
+        
+        <a href="/grupos" class="quick-link">
+          <div class="text-2xl mb-2">🏁</div>
+          <div class="text-sm">Grupos</div>
+        </a>
+        
+        <a href="/partidos" class="quick-link">
+          <div class="text-2xl mb-2">📅</div>
+          <div class="text-sm">Partidos</div>
+        </a>
+        
+        <a href="/tabla" class="quick-link">
+          <div class="text-2xl mb-2">📊</div>
+          <div class="text-sm">Tabla</div>
+        </a>
+        
+        <a href="/resultados" class="quick-link">
+          <div class="text-2xl mb-2">🏆</div>
+          <div class="text-sm">Resultados</div>
+        </a>
+        
+        <a href="/premios" class="quick-link">
+          <div class="text-2xl mb-2">🥇</div>
+          <div class="text-sm">Premios</div>
+        </a>
+        
+        <a href="/galeria" class="quick-link">
+          <div class="text-2xl mb-2">📸</div>
+          <div class="text-sm">Galería</div>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .hero-title {
+    @apply animate-glow;
+    background: linear-gradient(45deg, #ff00cc, #00ffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .hero-subtitle {
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  }
+  
+  .quick-link {
+    @apply bg-cyber-gray/50 backdrop-blur-sm rounded-lg p-4 text-center;
+    @apply border border-neon-purple/30 hover:border-neon-cyan/60;
+    @apply transition-all duration-300 hover:scale-105;
+    @apply hover:shadow-[0_0_15px_rgba(0,255,255,0.4)];
+    @apply text-white hover:text-neon-cyan;
+  }
+</style>

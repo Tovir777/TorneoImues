@@ -1,0 +1,208 @@
+---
+export interface Props {
+  images: Array<{
+    id: number;
+    titulo: string;
+    descripcion: string;
+    src: string;
+    thumbnail: string;
+    width: number;
+    height: number;
+    categoria: string;
+    fecha: string;
+    tags: string[];
+  }>;
+}
+
+const { images } = Astro.props;
+---
+
+<div class="photoswipe-gallery">
+  <div class="gallery-grid" id="gallery-grid">
+    {images.map((image, index) => (
+      <div 
+        class="gallery-item"
+        data-pswp-width={image.width}
+        data-pswp-height={image.height}
+      >
+        <a 
+          class="image-container group"
+          data-pswp-src={image.src}
+          data-pswp-width={image.width}
+          data-pswp-height={image.height}
+          target="_blank"
+        >
+          <div class="image-container">
+            <img 
+              src={image.thumbnail} 
+              alt={image.titulo}
+              loading="lazy"
+              class="gallery-image"
+            />
+            <div class="image-overlay">
+              <div class="image-info">
+                <h3 class="image-title">{image.titulo}</h3>
+                <p class="image-description">{image.descripcion}</p>
+                <div class="image-meta">
+                  <span class="image-date">{new Date(image.fecha).toLocaleDateString('es-ES')}</span>
+                </div>
+              </div>
+              <div class="zoom-icon">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .photoswipe-gallery {
+    @apply w-full;
+  }
+
+  .gallery-grid {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  .gallery-item {
+    @apply transition-all duration-300 hover:scale-105;
+  }
+
+  .image-container {
+    @apply relative overflow-hidden rounded-lg bg-cyber-gray/30;
+    @apply border border-neon-purple/30 hover:border-neon-cyan/60;
+    @apply transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,255,255,0.4)];
+    @apply cursor-pointer;
+  }
+
+  .gallery-image {
+    @apply w-full h-48 object-cover transition-transform duration-300;
+    @apply group-hover:scale-110;
+  }
+
+  .image-overlay {
+    @apply absolute inset-0 bg-gradient-to-t from-cyber-black/90 via-transparent to-transparent;
+    @apply opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+    @apply flex flex-col justify-between p-4;
+  }
+
+  .zoom-icon {
+    @apply absolute top-4 right-4 text-neon-cyan;
+    @apply w-8 h-8 flex items-center justify-center;
+    @apply bg-cyber-black/50 rounded-full backdrop-blur-sm;
+  }
+
+  .image-info {
+    @apply mt-auto;
+  }
+
+  .image-title {
+    @apply text-white font-bold text-sm mb-1;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .image-description {
+    @apply text-gray-300 text-xs mb-2 line-clamp-2;
+  }
+
+  .image-meta {
+    @apply flex justify-between items-center text-xs;
+  }
+
+  .image-date {
+    @apply text-neon-purple;
+  }
+
+  /* PhotoSwipe custom styles */
+  :global(.pswp) {
+    @apply z-[9999];
+  }
+
+  :global(.pswp__bg) {
+    background: rgba(18, 18, 18, 0.95) !important;
+    backdrop-filter: blur(10px);
+  }
+
+  :global(.pswp__ui) {
+    @apply text-white;
+  }
+
+  :global(.pswp__top-bar) {
+    background: linear-gradient(to bottom, rgba(30, 30, 47, 0.8), transparent) !important;
+  }
+
+  :global(.pswp__caption) {
+    background: linear-gradient(to top, rgba(30, 30, 47, 0.9), transparent) !important;
+    @apply text-white;
+  }
+
+  :global(.pswp__caption__center) {
+    @apply text-center;
+  }
+
+  :global(.pswp__button) {
+    @apply text-neon-cyan hover:text-neon-purple;
+    @apply transition-colors duration-300;
+  }
+
+  :global(.pswp__button:hover) {
+    @apply drop-shadow-[0_0_8px_rgba(0,255,255,0.8)];
+  }
+</style>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+
+  // Inicializar PhotoSwipe
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery-grid',
+    children: 'a',
+    pswpModule: () => import('photoswipe'),
+    
+    // Configuración personalizada
+    bgOpacity: 0.95,
+    showHideAnimationType: 'zoom',
+    
+    // Configurar caption personalizado
+    captionPlugin: {
+      captionContent: (slide) => {
+        const img = slide.data.element.querySelector('img');
+        const title = img?.alt || '';
+        
+        return `
+          <div class="custom-caption">
+            <h3 class="text-lg font-bold text-neon-cyan mb-2">${title}</h3>
+            <p class="text-sm text-gray-300 mb-2">${slide.data.element.querySelector('.image-description')?.textContent || ''}</p>
+            <div class="text-xs">
+              <span class="text-neon-purple">${slide.data.element.querySelector('.image-date')?.textContent || ''}</span>
+            </div>
+          </div>
+        `;
+      }
+    }
+  });
+
+  lightbox.init();
+
+  // Lazy loading mejorado
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src || img.src;
+        img.classList.remove('loading');
+        observer.unobserve(img);
+      }
+    });
+  });
+
+  document.querySelectorAll('.gallery-image').forEach(img => {
+    imageObserver.observe(img);
+  });
+</script>

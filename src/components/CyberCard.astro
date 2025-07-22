@@ -1,0 +1,57 @@
+---
+export interface Props {
+  title: string;
+  subtitle?: string;
+  gradient?: boolean;
+  class?: string;
+}
+
+const { title, subtitle, gradient = false, class: className = "" } = Astro.props;
+---
+
+<div class={`cyber-card ${gradient ? 'gradient-border' : ''} ${className}`}>
+  <div class="cyber-card-content">
+    <h3 class="cyber-card-title">{title}</h3>
+    {subtitle && <p class="cyber-card-subtitle">{subtitle}</p>}
+    <slot />
+  </div>
+</div>
+
+<style>
+  .cyber-card {
+    @apply bg-cyber-gray/50 backdrop-blur-sm rounded-lg p-6 border border-neon-purple/30;
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_rgba(255,0,204,0.3)];
+    @apply hover:border-neon-purple/60;
+  }
+  
+  .gradient-border {
+    @apply bg-gradient-to-br from-cyber-gray/50 to-cyber-dark/50;
+    @apply border-2 border-transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(135deg, #ff00cc, #00ffff, #ff00cc);
+    border-radius: inherit;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+  }
+  
+  .cyber-card-content {
+    @apply relative z-10;
+  }
+  
+  .cyber-card-title {
+    @apply text-xl font-bold text-neon-cyan mb-2;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+  
+  .cyber-card-subtitle {
+    @apply text-sm text-gray-300 mb-4;
+  }
+</style>

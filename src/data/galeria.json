@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "titulo": "Inauguración del Torneo",
+    "descripcion": "Ceremonia de apertura del II Zonal Baby Fútbol Masculino 2025",
+    "src": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg",
+    "thumbnail": "https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=400",
+    "width": 1920,
+    "height": 1280,
+    "categoria": "ceremonia",
+    "fecha": "2025-07-22",
+    "tags": ["inauguración", "ceremonia", "equipos"]
+  }
+  
+]

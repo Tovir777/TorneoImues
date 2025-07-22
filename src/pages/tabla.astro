@@ -1,0 +1,141 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import CyberCard from '../components/CyberCard.astro';
+import tablaData from '../data/tabla-posiciones.json';
+---
+
+<Layout 
+  title="Tabla de Posiciones - Baby Fútbol Imués 2025 | Clasificación por Grupos"
+  description="Tabla de posiciones actualizada del Baby Fútbol Imués 2025. Puntos, partidos jugados, goles y estadísticas completas de los grupos A, B y C."
+  url="https://baby-futbol-imues2025.vercel.app/tabla"
+>
+  <Header />
+  
+  <main class="pt-24 pb-12">
+    <section class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+        <span class="text-neon-purple">📊</span> Tabla de Posiciones
+      </h1>
+      
+      <p class="text-xl text-center text-neon-cyan mb-12">
+        Posiciones actuales por grupos - PJ: Partidos Jugados, PT: Puntos
+      </p>
+      
+      <div class="space-y-12">
+        <!-- Grupo A -->
+        <CyberCard title="Grupo A" gradient={true} class="table-card">
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="text-neon-cyan border-b border-neon-purple/30">
+                  <th class="text-left p-2">Pos</th>
+                  <th class="text-left p-2">Equipo</th>
+                  <th class="text-center p-2">PJ</th>
+                  <th class="text-center p-2">PG</th>
+                  <th class="text-center p-2">PE</th>
+                  <th class="text-center p-2">PP</th>
+                  <th class="text-center p-2">GF</th>
+                  <th class="text-center p-2">GC</th>
+                  <th class="text-center p-2">DG</th>
+                  <th class="text-center p-2">PT</th>
+                </tr>
+              </thead>
+              <tbody>
+                {tablaData.grupoA.map((equipo, index) => (
+                  <tr class={`border-b border-cyber-gray/30 ${index < 8 ? 'bg-green-500/10' : ''}`}>
+                    <td class="p-2">
+                      <span class={`inline-block w-6 h-6 rounded-full flex items-center justify-center text-xs ${
+                        index < 8 ? 'bg-green-500 text-white' : 'bg-cyber-gray text-gray-400'
+                      }`}>
+                        {equipo.posicion}
+                      </span>
+                    </td>
+                    <td class="p-2 text-white font-medium">{equipo.equipo}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.pj}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.pg}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.pe}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.pp}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.gf}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.gc}</td>
+                    <td class="p-2 text-center text-gray-300">{equipo.dg}</td>
+                    <td class="p-2 text-center text-neon-purple font-bold">{equipo.pt}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </CyberCard>
+      </div>
+      
+      <!-- Leyenda -->
+      <div class="mt-12">
+        <CyberCard title="Leyenda" class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-2 md:grid-cols-5 gap-4 text-sm">
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">PJ</div>
+              <div class="text-gray-400">Partidos Jugados</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">PG</div>
+              <div class="text-gray-400">Partidos Ganados</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">PE</div>
+              <div class="text-gray-400">Partidos Empatados</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">PP</div>
+              <div class="text-gray-400">Partidos Perdidos</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">GF</div>
+              <div class="text-gray-400">Goles a Favor</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">GC</div>
+              <div class="text-gray-400">Goles en Contra</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">DG</div>
+              <div class="text-gray-400">Diferencia de Goles</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">PT</div>
+              <div class="text-gray-400">Puntos</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">TA</div>
+              <div class="text-gray-400">Tarjetas Amarillas</div>
+            </div>
+            <div class="space-y-1">
+              <div class="text-neon-cyan font-medium">TR</div>
+              <div class="text-gray-400">Tarjetas Rojas</div>
+            </div>
+          </div>
+          
+          <div class="mt-6 flex items-center space-x-4">
+            <div class="flex items-center space-x-2">
+              <div class="w-4 h-4 bg-green-500 rounded"></div>
+              <span class="text-sm text-white">Clasifican a cuartos de final</span>
+            </div>
+          </div>
+        </CyberCard>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .table-card {
+    @apply hover:shadow-[0_0_25px_rgba(255,0,204,0.4)];
+  }
+  
+  .table-card table {
+    @apply min-w-full;
+  }
+  
+  .table-card th {
+    @apply font-medium;
+  }
+</style>

@@ -1,0 +1,28 @@
+{
+  "campeon": {
+    "equipo": "Por definir",
+    "ciudad": "TBD"
+  },
+  "subcampeon": {
+    "equipo": "Por definir",
+    "ciudad": "TBD"
+  },
+  "tercero": {
+    "equipo": "Por definir",
+    "ciudad": "TBD"
+  },
+  "cuarto": {
+    "equipo": "Por definir",
+    "ciudad": "TBD"
+  },
+  "goleador": {
+    "jugador": "Por definir",
+    "equipo": "TBD",
+    "goles": 0
+  },
+  "vallaMenosVencida": {
+    "jugador": "Por definir",
+    "equipo": "TBD",
+    "golesRecibidos": 0
+  }
+}

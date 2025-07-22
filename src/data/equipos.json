@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "nombre": "Aldrin Túmaco",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187076/image_1_d0sxvo.svg"
+  },
+  {
+    "id": 2,
+    "nombre": "Alianza Sureña",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_2_oe6wqk.svg"
+  },
+  {
+    "id": 3,
+    "nombre": "Club All Boys",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_3_fr6cjd.svg"
+  },
+  {
+    "id": 4,
+    "nombre": "Sporting de Nariño Rio Real",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_4_dia6fx.svg"
+  },
+  {
+    "id": 5,
+    "nombre": "Pedregal F.C.",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_5_rado3x.svg"
+  },
+  {
+    "id": 6,
+    "nombre": "Deportivo Pasto",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_6_e7ds7z.svg"
+  },
+  {
+    "id": 7,
+    "nombre": "Independiente F. C.",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_7_ccjtog.svg"
+  },
+  {
+    "id": 8,
+    "nombre": "Mayorga F.C.",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_8_euxr84.svg"
+  },
+  {
+    "id": 9,
+    "nombre": "JLC Ancuya",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_9_mjo6gb.svg"
+  },
+  {
+    "id": 10,
+    "nombre": "Radi F. C. Ipiales",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_10_uphqv6.svg"
+  },
+  {
+    "id": 11,
+    "nombre": "Real Madrid De Túmaco",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_11_axjztd.svg"
+  },
+  {
+    "id": 12,
+    "nombre": "Águilas F.C.",
+    "ciudad": "",
+    "departamento": "",
+    "entrenador": "",
+    "logo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_12_xwfybu.svg"
+  }
+]

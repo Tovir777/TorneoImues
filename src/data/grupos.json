@@ -1,0 +1,77 @@
+{
+  "grupoA": {
+    "nombre": "Grupo A",
+    "equipos": [
+      {
+        "id": 1,
+        "nombre": "1A",
+        "ciudad": ""
+      },
+      {
+        "id": 2,
+        "nombre": "2A",
+        "ciudad": ""
+      },
+      {
+        "id": 3,
+        "nombre": "3A",
+        "ciudad": ""
+      },
+      {
+        "id": 4,
+        "nombre": "4A",
+        "ciudad": ""
+      }
+    ]
+  },
+  "grupoB": {
+    "nombre": "Grupo B",
+    "equipos": [
+      {
+        "id": 5,
+        "nombre": "1B",
+        "ciudad": ""
+      },
+      {
+        "id": 6,
+        "nombre": "2B",
+        "ciudad": ""
+      },
+      {
+        "id": 7,
+        "nombre": "3B",
+        "ciudad": ""
+      },
+      {
+        "id": 8,
+        "nombre": "4B",
+        "ciudad": ""
+      }
+    ]
+  },
+  "grupoC": {
+    "nombre": "Grupo C",
+    "equipos": [
+      {
+        "id": 9,
+        "nombre": "1C",
+        "ciudad": ""
+      },
+      {
+        "id": 10,
+        "nombre": "2C",
+        "ciudad": ""
+      },
+      {
+        "id": 11,
+        "nombre": "3C",
+        "ciudad": ""
+      },
+      {
+        "id": 12,
+        "nombre": "4C",
+        "ciudad": ""
+      }
+    ]
+  }
+}

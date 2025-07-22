@@ -1,0 +1,212 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import CyberCard from "../components/CyberCard.astro";
+import data from "../data/programacion.json";
+
+const { equipos, partidos } = data;
+
+// Agrupar partidos por fecha
+const partidosPorFecha = partidos.reduce((acc, partido) => {
+  if (!acc[partido.fecha]) acc[partido.fecha] = [];
+  acc[partido.fecha].push(partido);
+  return acc;
+}, {});
+
+// Función para formatear fecha
+const formatearFecha = (fecha) => {
+  const date = new Date(fecha + "T00:00:00");
+  return date.toLocaleDateString("es-CO", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+};
+
+// Función para formatear hora
+const formatearHora = (hora) => hora;
+
+// Buscar datos del equipo
+const buscarEquipo = (id) => {
+  return equipos.find((eq) => eq.id === id) || { nombre: id, escudo: null };
+};
+---
+
+<Layout
+  title="Programación de Partidos - Baby Fútbol Imués 2025 | Fixture Completo"
+  description="Programación completa de partidos del Baby Fútbol Imués 2025. fechas y resultados de fase de grupos, cuartos, semifinales y final del 22 al 27 de julio."
+  url="https://baby-futbol-imues2025.vercel.app/partidos"
+>
+  <Header />
+
+  <main class="pt-24 pb-12">
+    <section class="container mx-auto px-4">
+      <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
+        <span class="text-neon-cyan">📅</span> Programación de Partidos
+      </h1>
+
+      <p class="text-xl text-center text-neon-purple mb-12">
+        Todos los partidos del torneo - Del 22 al 27 de julio de 2025
+      </p>
+
+      <div class="space-y-12">
+        {
+          Object.entries(partidosPorFecha).map(([fecha, partidos]) => (
+            <div class="date-section">
+              <h2 class="text-2xl font-bold text-neon-cyan mb-6 text-center">
+                {formatearFecha(fecha)}
+              </h2>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {partidos.map((partido) => {
+                  const local = buscarEquipo(partido.equipoLocal);
+                  const visitante = buscarEquipo(partido.equipoVisitante);
+                  return (
+                    <CyberCard
+                      title={`${partido.fase}${partido.grupo ? ` - Grupo ${partido.grupo}` : ""}`}
+                      gradient={true}
+                      class="match-card"
+                    >
+                      <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                          <div class="flex-1 text-center">
+                            <div class="flex items-center justify-center">
+                              <div
+                                class="bg-white rounded-xl shadow-lg flex items-center justify-center"
+                                style="width: 1.5cm; height: 1.5cm;"
+                              >
+                                {local.escudo && (
+                                  <img
+                                    src={local.escudo}
+                                    alt={local.nombre}
+                                    class="mx-auto w-12 h-12 object-contain mb-1"
+                                  />
+                                )}
+                              </div>
+                            </div>
+
+                            <div class="text-lg font-medium text-white">
+                              {local.nombre ?? partido.equipoLocal}
+                            </div>
+                            <div class="text-sm text-gray-400">Local</div>
+                          </div>
+
+                          <div class="mx-4 text-center">
+                            <div class="text-2xl font-bold text-neon-purple">
+                              {partido.golesLocal !== null
+                                ? `${partido.golesLocal} - ${partido.golesVisitante}`
+                                : "VS"}
+                            </div>
+                            <div class="text-sm text-gray-400">
+                              {formatearHora(partido.hora)}
+                            </div>
+                          </div>
+
+                          <div class="flex-1 text-center">
+                            <div class="flex items-center justify-center">
+                              <div
+                                class="bg-white rounded-xl shadow-lg flex items-center justify-center"
+                                style="width: 1.5cm; height: 1.5cm;"
+                              >
+                                {visitante.escudo && (
+                                  <img
+                                    src={visitante.escudo}
+                                    alt={visitante.nombre}
+                                    class="mx-auto w-12 h-12 object-contain mb-1"
+                                  />
+                                )}
+                              </div>
+                            </div>
+
+                            <div class="text-lg font-medium text-white">
+                              {visitante.nombre ?? partido.equipoVisitante}
+                            </div>
+                            <div class="text-sm text-gray-400">Visitante</div>
+                          </div>
+                        </div>
+
+                        <div class="text-center">
+                          <span
+                            class={`inline-block px-3 py-1 rounded-full text-sm ${
+                              partido.estado === "finalizado"
+                                ? "bg-green-500/20 text-green-400"
+                                : partido.estado === "en_curso"
+                                  ? "bg-yellow-500/20 text-yellow-400"
+                                  : "bg-blue-500/20 text-blue-400"
+                            }`}
+                          >
+                            {partido.estado === "finalizado"
+                              ? "✅ Finalizado"
+                              : partido.estado === "en_curso"
+                                ? "⚽ En Curso"
+                                : "🕐 Programado"}
+                          </span>
+                        </div>
+                      </div>
+                    </CyberCard>
+                  );
+                })}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+
+      <!-- Fases del Torneo -->
+      <div class="mt-16">
+        <h2 class="text-3xl font-bold text-center text-neon-purple mb-8">
+          🏆 Fases del Torneo
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <CyberCard title="Fase de Grupos">
+            <div class="space-y-2">
+              <p class="text-white">📅 22-24 de Julio</p>
+              <p class="text-gray-400">Todos contra todos en cada grupo</p>
+              <p class="text-neon-cyan">18 partidos total</p>
+            </div>
+          </CyberCard>
+
+          <CyberCard title="Cuartos de Final">
+            <div class="space-y-2">
+              <p class="text-white">📅 25 de Julio</p>
+              <p class="text-gray-400">Eliminación directa</p>
+              <p class="text-neon-cyan">8 equipos clasificados</p>
+            </div>
+          </CyberCard>
+
+          <CyberCard title="Semifinales">
+            <div class="space-y-2">
+              <p class="text-white">📅 26 de Julio</p>
+              <p class="text-gray-400">Definición de finalistas</p>
+              <p class="text-neon-cyan">4 equipos</p>
+            </div>
+          </CyberCard>
+
+          <CyberCard title="Final">
+            <div class="space-y-2">
+              <p class="text-white">📅 27 de Julio</p>
+              <p class="text-gray-400">Gran Final + 3er lugar</p>
+              <p class="text-neon-cyan">¡Campeón!</p>
+            </div>
+          </CyberCard>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .match-card {
+    @apply hover:shadow-[0_0_25px_rgba(255,0,204,0.4)];
+  }
+
+  .date-section {
+    @apply border-b border-neon-purple/20 pb-8;
+  }
+
+  .date-section:last-child {
+    @apply border-b-0;
+  }
+</style>
