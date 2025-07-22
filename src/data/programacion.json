@@ -53,7 +53,7 @@
   {
     "id": 4,
     "fecha": "2025-07-23",
-    "hora": "14:30",
+    "hora": "14:00",
     "fase": "Grupos",
     "grupo": "A",
     "equipoLocal": "3A",
@@ -65,7 +65,7 @@
   {
     "id": 5,
     "fecha": "2025-07-23",
-    "hora": "15:45",
+    "hora": "15:15",
     "fase": "Grupos",
     "grupo": "B",
     "equipoLocal": "3B",
@@ -77,7 +77,7 @@
   {
     "id": 6,
     "fecha": "2025-07-23",
-    "hora": "17:00",
+    "hora": "16:30",
     "fase": "Grupos",
     "grupo": "C",
     "equipoLocal": "3C",
