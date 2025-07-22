@@ -1,17 +1,17 @@
 {
   "equipos": [
-    { "id": "1A", "nombre": null, "escudo": null, "grupo": "A" },
-    { "id": "2A", "nombre": null, "escudo": null, "grupo": "A" },
-    { "id": "3A", "nombre": null, "escudo": null, "grupo": "A" },
-    { "id": "4A", "nombre": null, "escudo": null, "grupo": "A" },
-    { "id": "1B", "nombre": null, "escudo": null, "grupo": "B" },
-    { "id": "2B", "nombre": null, "escudo": null, "grupo": "B" },
-    { "id": "3B", "nombre": null, "escudo": null, "grupo": "B" },
-    { "id": "4B", "nombre": null, "escudo": null, "grupo": "B" },
-    { "id": "1C", "nombre": null, "escudo": null, "grupo": "C" },
-    { "id": "2C", "nombre": null, "escudo": null, "grupo": "C" },
-    { "id": "3C", "nombre": null, "escudo": null, "grupo": "C" },
-    { "id": "4C", "nombre": null, "escudo": null, "grupo": "C" }
+    { "id": "1A", "nombre": "Club All Boys Pasto", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_3_fr6cjd.svg", "grupo": "A" },
+    { "id": "2A", "nombre": "Real Madrid De Túmaco", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_11_axjztd.svg", "grupo": "A" },
+    { "id": "3A", "nombre": "Aldrin Túmaco", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187076/image_1_d0sxvo.svg", "grupo": "A" },
+    { "id": "4A", "nombre": "JLC Ancuya", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_9_mjo6gb.svg", "grupo": "A" },
+    { "id": "1B", "nombre": "Deportivo Pasto", "escudo":  "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_6_e7ds7z.svg", "grupo": "B" },
+    { "id": "2B", "nombre": "Independiente F. C.", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_7_ccjtog.svg", "grupo": "B" },
+    { "id": "3B", "nombre": "Radi F. C. Ipiales", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_10_uphqv6.svg", "grupo": "B" },
+    { "id": "4B", "nombre": "Alianza Sureña", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_2_oe6wqk.svg", "grupo": "B" },
+    { "id": "1C", "nombre": "Sporting de Nariño Rio Real", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_4_dia6fx.svg", "grupo": "C" },
+    { "id": "2C", "nombre": "Mayorga F.C.", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_8_euxr84.svg", "grupo": "C" },
+    { "id": "3C", "nombre": "Pedregal F.C.", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_5_rado3x.svg", "grupo": "C" },
+    { "id": "4C", "nombre": "Águilas F.C.", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_12_xwfybu.svg", "grupo": "C" }
   ],
   "partidos": [
    {
