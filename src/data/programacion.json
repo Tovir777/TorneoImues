@@ -24,7 +24,7 @@
     "equipoVisitante": "2C",
     "golesLocal": 1,
     "golesVisitante": 0,
-    "estado": "Finalizado"
+    "estado": "finalizado"
   },
   {
     "id": 2,
@@ -36,7 +36,7 @@
     "equipoVisitante": "2B",
     "golesLocal": 2,
     "golesVisitante": 1,
-    "estado": "Finalizado"
+    "estado": "finalizado"
   },
   {
     "id": 3,
@@ -48,7 +48,7 @@
     "equipoVisitante": "2A",
     "golesLocal": 0,
     "golesVisitante": 3,
-    "estado": "Finalizado"
+    "estado": "finalizado"
   },
   {
     "id": 4,
