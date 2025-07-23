@@ -5,7 +5,7 @@
     { "id": "3A", "nombre": "Aldrin Túmaco", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187076/image_1_d0sxvo.svg", "grupo": "A" },
     { "id": "4A", "nombre": "JLC Ancuya", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_9_mjo6gb.svg", "grupo": "A" },
     { "id": "1B", "nombre": "Deportivo Pasto", "escudo":  "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_6_e7ds7z.svg", "grupo": "B" },
-    { "id": "2B", "nombre": "Independiente F. C.", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_7_ccjtog.svg", "grupo": "B" },
+    { "id": "2B", "nombre": "Independ. F. C.", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_7_ccjtog.svg", "grupo": "B" },
     { "id": "3B", "nombre": "Radi F. C. Ipiales", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187078/image_10_uphqv6.svg", "grupo": "B" },
     { "id": "4B", "nombre": "Alianza Sureña", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_2_oe6wqk.svg", "grupo": "B" },
     { "id": "1C", "nombre": "Sporting de Nariño Rio Real", "escudo": "https://res.cloudinary.com/dny2fuvgi/image/upload/v1753187077/image_4_dia6fx.svg", "grupo": "C" },
@@ -24,7 +24,7 @@
     "equipoVisitante": "2C",
     "golesLocal": 1,
     "golesVisitante": 0,
-    "estado": "Por Iniciar"
+    "estado": "Finalizado"
   },
   {
     "id": 2,
@@ -34,9 +34,9 @@
     "grupo": "B",
     "equipoLocal": "1B",
     "equipoVisitante": "2B",
-    "golesLocal": null,
-    "golesVisitante": null,
-    "estado": "Por Iniciar"
+    "golesLocal": 2,
+    "golesVisitante": 1,
+    "estado": "Finalizado"
   },
   {
     "id": 3,
@@ -46,9 +46,9 @@
     "grupo": "A",
     "equipoLocal": "1A",
     "equipoVisitante": "2A",
-    "golesLocal": null,
-    "golesVisitante": null,
-    "estado": "Por Iniciar"
+    "golesLocal": 3,
+    "golesVisitante": 0,
+    "estado": "Finalizado"
   },
   {
     "id": 4,
