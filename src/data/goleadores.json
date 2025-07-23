@@ -1,20 +1,57 @@
 [
   {
-    "posicion": 1,
-    "jugador": "Nicolas Neiva",
-    "equipo": "Sporting de Nariño Rio Real",
+    "equipo": "Real Madrid De Túmaco",
+    "jugador": "Keider Ferrín",
+    "goles": 2
+  },
+  {
+    "equipo": "Aldrin Túmaco",
+    "jugador": "Dilan Tenorio",
+    "goles": 2
+  },
+  {
+    "equipo": "Deportivo Pasto",
+    "jugador": "Isaac Patiño",
+    "goles": 2
+  },
+  {
+    "equipo": "Águilas F. C.",
+    "jugador": "Juan Estacio",
+    "goles": 2
+  },
+  {
+    "equipo": "Radi F. C. Ipiales",
+    "jugador": "Felipe Villarreal",
     "goles": 1
   },
   {
-    "posicion": 2,
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "goles": 0
+    "equipo": "Águilas F. C.",
+    "jugador": "Cristopher Benavides",
+    "goles": 1
   },
   {
-    "posicion": 3,
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "goles": 0
+    "equipo": "Real Madrid De Túmaco",
+    "jugador": "Milan Cortes",
+    "goles": 1
+  },
+  {
+    "equipo": "Sporting Rio Real",
+    "jugador": "Nicolas Neiva",
+    "goles": 1
+  },
+  {
+    "equipo": "Águilas F. C.",
+    "jugador": "Nicolas Delgado",
+    "goles": 1
+  },
+  {
+    "equipo": "Águilas F. C.",
+    "jugador": "Ramses Diaz",
+    "goles": 1
+  },
+  {
+    "equipo": "Independiente F. C.",
+    "jugador": "Josse Miranda",
+    "goles": 1
   }
 ]
