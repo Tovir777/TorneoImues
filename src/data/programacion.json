@@ -46,8 +46,8 @@
     "grupo": "A",
     "equipoLocal": "1A",
     "equipoVisitante": "2A",
-    "golesLocal": 3,
-    "golesVisitante": 0,
+    "golesLocal": 0,
+    "golesVisitante": 3,
     "estado": "Finalizado"
   },
   {
