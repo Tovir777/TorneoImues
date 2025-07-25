@@ -237,8 +237,8 @@
     "hora": "08:00",
     "fase": "Cuartos de Final",
     "grupo": null,
-    "equipoLocal": "#1",
-    "equipoVisitante": "#8",
+    "equipoLocal": "2A",
+    "equipoVisitante": "1B",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
@@ -249,8 +249,8 @@
     "hora": "09:15",
     "fase": "Cuartos de Final",
     "grupo": null,
-    "equipoLocal": "#2",
-    "equipoVisitante": "#7",
+    "equipoLocal": "1C",
+    "equipoVisitante": "4B",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
@@ -261,8 +261,8 @@
     "hora": "10:30",
     "fase": "Cuartos de Final",
     "grupo": null,
-    "equipoLocal": "#3",
-    "equipoVisitante": "#6",
+    "equipoLocal": "3B",
+    "equipoVisitante": "2C",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
@@ -273,8 +273,8 @@
     "hora": "11:45",
     "fase": "Cuartos de Final",
     "grupo": null,
-    "equipoLocal": "#4",
-    "equipoVisitante": "#5",
+    "equipoLocal": "3A",
+    "equipoVisitante": "4C",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
