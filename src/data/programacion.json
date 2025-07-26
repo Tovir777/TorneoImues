@@ -285,8 +285,8 @@
     "hora": "15:45",
     "fase": "Semifinal",
     "grupo": null,
-    "equipoLocal": "GP1",
-    "equipoVisitante": "GP4",
+    "equipoLocal": "2A",
+    "equipoVisitante": "3A",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
@@ -297,8 +297,8 @@
     "hora": "17:00",
     "fase": "Semifinal",
     "grupo": null,
-    "equipoLocal": "GP2",
-    "equipoVisitante": "GP3",
+    "equipoLocal": "1C",
+    "equipoVisitante": "3B",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
