@@ -306,11 +306,11 @@
   {
     "id": 25,
     "fecha": "2025-07-27",
-    "hora": "09:15",
+    "hora": "09:00",
     "fase": "Tercer Puesto",
     "grupo": null,
-    "equipoLocal": "PE1",
-    "equipoVisitante": "PE2",
+    "equipoLocal": "3A",
+    "equipoVisitante": "1C",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
@@ -321,8 +321,8 @@
     "hora": "10:30",
     "fase": "Final",
     "grupo": null,
-    "equipoLocal": "GE1",
-    "equipoVisitante": "GE2",
+    "equipoLocal": "2A",
+    "equipoVisitante": "3B",
     "golesLocal": null,
     "golesVisitante": null,
     "estado": "Por Iniciar"
