@@ -1,26 +1,22 @@
 [
-  {
-    "posicion": 1,
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "ta": 0,
-    "tr": 0,
-    "puntos": 0
-  },
-  {
-    "posicion": 2,
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "ta": 0,
-    "tr": 0,
-    "puntos": 0
-  },
-  {
-    "posicion": 3,
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "ta": 0,
-    "tr": 0,
-    "puntos": 0
-  }
+  { "posicion": 1,  "jugador": "RAMSES DIAZ",         "equipo": "Águilas F. C.",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 2,  "jugador": "JAVIER GRUESO",       "equipo": "Aldrin Túmaco",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 3,  "jugador": "JEFRY SEVILLANO",     "equipo": "Aldrin Túmaco",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 4,  "jugador": "LUIS DELGADO",        "equipo": "Mayorga F. C.",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 5,  "jugador": "THIAGO LOPEZ",        "equipo": "Deportivo Pasto",       "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 6,  "jugador": "RODRIGE URBANO",      "equipo": "Independiente F. C.",   "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 7,  "jugador": "SANTIAGO SANTACRUZ",  "equipo": "Club All Boys",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 8,  "jugador": "ALAN CAJARES",        "equipo": "Alianza Sureña",        "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 9,  "jugador": "MATIAS SEVILLANO",    "equipo": "Real Madrid De Túmaco", "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 10, "jugador": "ALEJANDRO DURÁN",     "equipo": "Sporting Rio Real",     "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 11, "jugador": "NICOLAS DELGADO",     "equipo": "Águilas F. C.",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 12, "jugador": "JHOJAN ROSERO",       "equipo": "Deportivo Pasto",       "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 13, "jugador": "DILAN RINCON",        "equipo": "Club All Boys",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 14, "jugador": "STIVEN IUA",          "equipo": "Radi F. C. Ipiales",    "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 15, "jugador": "JONATHAN GRUESO",     "equipo": "Real Madrid De Túmaco", "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 16, "jugador": "KEVIN MONTAÑO",       "equipo": "Aldrin Túmaco",         "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 17, "jugador": "THIAGO BURGOIS",      "equipo": "Sporting Rio Real",     "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 18, "jugador": "MILAN CORTES",        "equipo": "Real Madrid De Túmaco", "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 19, "jugador": "DILAN BURBANO",       "equipo": "Alianza Sureña",        "ta": 1, "tr": 0, "puntos": 0 },
+  { "posicion": 20, "jugador": "JULIAN CASTRO",       "equipo": "Aldrin Túmaco",         "ta": 1, "tr": 0, "puntos": 0 }
 ]

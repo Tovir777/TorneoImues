@@ -1,28 +1,30 @@
 {
   "campeon": {
-    "equipo": "Por definir",
-    "ciudad": "TBD"
+    "equipo": "Real Madrid De Túmaco",
+    "ciudad": "Túmaco"
   },
   "subcampeon": {
-    "equipo": "Por definir",
-    "ciudad": "TBD"
+    "equipo": "Radi F. C. Ipiales",
+    "ciudad": "Ipiales"
   },
   "tercero": {
-    "equipo": "Por definir",
-    "ciudad": "TBD"
+    "equipo": "Aldrin Túmaco",
+    "ciudad": "Túmaco"
   },
   "cuarto": {
-    "equipo": "Por definir",
-    "ciudad": "TBD"
+    "equipo": "Sporting Rio Real",
+    "ciudad": "Pasto"
   },
-  "goleador": {
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "goles": 0
-  },
+  "goleador": 
+    {
+      "jugador": "MILAN CORTES  y JEFRY CUERO",
+      "equipo": "Real Madrid De Túmaco",
+      "goles": 6
+    }
+  ,
   "vallaMenosVencida": {
-    "jugador": "Por definir",
-    "equipo": "TBD",
-    "golesRecibidos": 0
+    "jugador": "Ener Arboleda",
+    "equipo": "Real Madrid De Túmaco",
+    "golesRecibidos": 2
   }
 }

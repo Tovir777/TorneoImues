@@ -16,6 +16,72 @@ import resultadosFinales from '../data/resultados-finales.json';
   
   <main class="pt-24 pb-12">
     <section class="container mx-auto px-4">
+
+        <!-- Resultados Finales -->
+        <div>
+          <h2 class="text-3xl font-bold text-neon-purple mb-6 mt-6 text-center">
+            🏆 Resultados Finales
+          </h2>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Podio -->
+            <CyberCard title="🥇 Campeón" gradient={true} class="podium-card champion">
+              <div class="text-center space-y-2">
+                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-2xl">🏆</span>
+                </div>
+                <div class="text-xl font-bold text-white">{resultadosFinales.campeon.equipo}</div>
+                <div class="text-sm text-gray-300">{resultadosFinales.campeon.ciudad}</div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="🥈 Subcampeón" gradient={true} class="podium-card">
+              <div class="text-center space-y-2">
+                <div class="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-2xl">🥈</span>
+                </div>
+                <div class="text-xl font-bold text-white">{resultadosFinales.subcampeon.equipo}</div>
+                <div class="text-sm text-gray-300">{resultadosFinales.subcampeon.ciudad}</div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="🥉 Tercer Lugar" gradient={true} class="podium-card">
+              <div class="text-center space-y-2">
+                <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-2xl">🥉</span>
+                </div>
+                <div class="text-xl font-bold text-white">{resultadosFinales.tercero.equipo}</div>
+                <div class="text-sm text-gray-300">{resultadosFinales.tercero.ciudad}</div>
+              </div>
+            </CyberCard>
+          </div>
+          
+          <!-- Premios Individuales -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <CyberCard title="⚽ Goleador del Torneo" gradient={true}>
+              <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-gradient-to-br from-neon-purple to-neon-cyan rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-xl">⚽</span>
+                </div>
+                <div class="text-lg font-bold text-white">{resultadosFinales.goleador.jugador}</div>
+                <div class="text-sm text-gray-300">{resultadosFinales.goleador.equipo}</div>
+                <div class="text-neon-purple font-bold">{resultadosFinales.goleador.goles} goles</div>
+              </div>
+            </CyberCard>
+            
+            <CyberCard title="🥅 Valla Menos Vencida" gradient={true}>
+              <div class="text-center space-y-2">
+                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto">
+                  <span class="text-xl">🥅</span>
+                </div>
+                <div class="text-lg font-bold text-white">{resultadosFinales.vallaMenosVencida.jugador}</div>
+                <div class="text-sm text-gray-300">{resultadosFinales.vallaMenosVencida.equipo}</div>
+                <div class="text-green-400 font-bold">{resultadosFinales.vallaMenosVencida.golesRecibidos} goles recibidos</div>
+              </div>
+            </CyberCard>
+          </div>
+        </div>
+
       <h1 class="text-4xl md:text-5xl font-bold text-center mb-8">
         <span class="text-neon-cyan">🏆</span> Resultados del Torneo
       </h1>
@@ -81,16 +147,15 @@ import resultadosFinales from '../data/resultados-finales.json';
                     <th class="text-left p-3">Jugador</th>
                     <th class="text-left p-3">Equipo</th>
                     <th class="text-center p-3">TA</th>
-                    <th class="text-center p-3">TR</th>
-                    <th class="text-center p-3">Puntos</th>
+                    <th class="text-center p-3">TR</th>                    
                   </tr>
                 </thead>
                 <tbody>
                   {juegoLimpio.map((jugador, index) => (
-                    <tr class={`border-b border-cyber-gray/30 ${index === 0 ? 'bg-green-500/10' : ''}`}>
+                    <tr class={`border-b border-cyber-gray/30 ${index === 0 ? 'border-b border-cyber-gray/30' : ''}`}>
                       <td class="p-3">
                         <span class={`inline-block w-8 h-8 rounded-full flex items-center justify-center text-sm ${
-                          index === 0 ? 'bg-green-500 text-white' : 
+                          index === 0 ? 'bg-cyber-gray text-gray-400' : 
                           'bg-cyber-gray text-gray-400'
                         }`}>
                           {jugador.posicion}
@@ -100,7 +165,6 @@ import resultadosFinales from '../data/resultados-finales.json';
                       <td class="p-3 text-gray-300">{jugador.equipo}</td>
                       <td class="p-3 text-center text-yellow-400">{jugador.ta}</td>
                       <td class="p-3 text-center text-red-400">{jugador.tr}</td>
-                      <td class="p-3 text-center text-neon-cyan font-bold">{jugador.puntos}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -113,72 +177,7 @@ import resultadosFinales from '../data/resultados-finales.json';
             </div>
           </CyberCard>
         </div>
-        
-        <!-- Resultados Finales -->
-        <div>
-          <h2 class="text-3xl font-bold text-neon-purple mb-6 text-center">
-            🏆 Resultados Finales
-          </h2>
-          
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- Podio -->
-            <CyberCard title="🥇 Campeón" gradient={true} class="podium-card champion">
-              <div class="text-center space-y-2">
-                <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-yellow-600 rounded-full flex items-center justify-center mx-auto">
-                  <span class="text-2xl">🏆</span>
-                </div>
-                <div class="text-xl font-bold text-white">{resultadosFinales.campeon.equipo}</div>
-                <div class="text-sm text-gray-300">{resultadosFinales.campeon.ciudad}</div>
-              </div>
-            </CyberCard>
-            
-            <CyberCard title="🥈 Subcampeón" gradient={true} class="podium-card">
-              <div class="text-center space-y-2">
-                <div class="w-16 h-16 bg-gradient-to-br from-gray-400 to-gray-600 rounded-full flex items-center justify-center mx-auto">
-                  <span class="text-2xl">🥈</span>
-                </div>
-                <div class="text-xl font-bold text-white">{resultadosFinales.subcampeon.equipo}</div>
-                <div class="text-sm text-gray-300">{resultadosFinales.subcampeon.ciudad}</div>
-              </div>
-            </CyberCard>
-            
-            <CyberCard title="🥉 Tercer Lugar" gradient={true} class="podium-card">
-              <div class="text-center space-y-2">
-                <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mx-auto">
-                  <span class="text-2xl">🥉</span>
-                </div>
-                <div class="text-xl font-bold text-white">{resultadosFinales.tercero.equipo}</div>
-                <div class="text-sm text-gray-300">{resultadosFinales.tercero.ciudad}</div>
-              </div>
-            </CyberCard>
-          </div>
-          
-          <!-- Premios Individuales -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
-            <CyberCard title="⚽ Goleador del Torneo" gradient={true}>
-              <div class="text-center space-y-2">
-                <div class="w-12 h-12 bg-gradient-to-br from-neon-purple to-neon-cyan rounded-full flex items-center justify-center mx-auto">
-                  <span class="text-xl">⚽</span>
-                </div>
-                <div class="text-lg font-bold text-white">{resultadosFinales.goleador.jugador}</div>
-                <div class="text-sm text-gray-300">{resultadosFinales.goleador.equipo}</div>
-                <div class="text-neon-purple font-bold">{resultadosFinales.goleador.goles} goles</div>
-              </div>
-            </CyberCard>
-            
-            <CyberCard title="🥅 Valla Menos Vencida" gradient={true}>
-              <div class="text-center space-y-2">
-                <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto">
-                  <span class="text-xl">🥅</span>
-                </div>
-                <div class="text-lg font-bold text-white">{resultadosFinales.vallaMenosVencida.jugador}</div>
-                <div class="text-sm text-gray-300">{resultadosFinales.vallaMenosVencida.equipo}</div>
-                <div class="text-green-400 font-bold">{resultadosFinales.vallaMenosVencida.golesRecibidos} goles recibidos</div>
-              </div>
-            </CyberCard>
-          </div>
-        </div>
-      </div>
+            </div>
     </section>
   </main>
 </Layout>

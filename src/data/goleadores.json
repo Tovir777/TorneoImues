@@ -1,57 +1,43 @@
 [
-  {
-    "equipo": "Real Madrid De Túmaco",
-    "jugador": "Keider Ferrín",
-    "goles": 2
-  },
-  {
-    "equipo": "Aldrin Túmaco",
-    "jugador": "Dilan Tenorio",
-    "goles": 2
-  },
-  {
-    "equipo": "Deportivo Pasto",
-    "jugador": "Isaac Patiño",
-    "goles": 2
-  },
-  {
-    "equipo": "Águilas F. C.",
-    "jugador": "Juan Estacio",
-    "goles": 2
-  },
-  {
-    "equipo": "Radi F. C. Ipiales",
-    "jugador": "Felipe Villarreal",
-    "goles": 1
-  },
-  {
-    "equipo": "Águilas F. C.",
-    "jugador": "Cristopher Benavides",
-    "goles": 1
-  },
-  {
-    "equipo": "Real Madrid De Túmaco",
-    "jugador": "Milan Cortes",
-    "goles": 1
-  },
-  {
-    "equipo": "Sporting Rio Real",
-    "jugador": "Nicolas Neiva",
-    "goles": 1
-  },
-  {
-    "equipo": "Águilas F. C.",
-    "jugador": "Nicolas Delgado",
-    "goles": 1
-  },
-  {
-    "equipo": "Águilas F. C.",
-    "jugador": "Ramses Diaz",
-    "goles": 1
-  },
-  {
-    "equipo": "Independiente F. C.",
-    "jugador": "Josse Miranda",
-    "goles": 1
-  }
+     { "equipo": "Real Madrid De Túmaco", "jugador": "MILAN CORTES", "goles": 6 },
+    { "equipo": "Real Madrid De Túmaco", "jugador": "JEFRY CUERO", "goles": 6 },
+    { "equipo": "Aldrin Túmaco", "jugador": "DILAN TENORIO", "goles": 5 },
+    { "equipo": "Águilas F. C.", "jugador": "JUAN CAMILO ESTACIO", "goles": 5 },
+    { "equipo": "Sporting Rio Real", "jugador": "ALEJANDRO DURÁN", "goles": 4 },
+    { "equipo": "Sporting Rio Real", "jugador": "ANDRÉS MONTANCHEZ", "goles": 3 },
+    { "equipo": "Real Madrid De Túmaco", "jugador": "KEIDER FERRÍN", "goles": 3 },
+    { "equipo": "Sporting Rio Real", "jugador": "JONIER ANGULO", "goles": 3 },
+    { "equipo": "Radi F. C. Ipiales", "jugador": "MANUEL BELARCAZAR", "goles": 2 },
+    { "equipo": "Radi F. C. Ipiales", "jugador": "JHOAN CEBALLOS", "goles": 2 },
+    { "equipo": "Aldrin Túmaco", "jugador": "OZTIN NAZARENO", "goles": 2 },
+    { "equipo": "Aldrin Túmaco", "jugador": "DORLAN VALENCIA", "goles": 2 },
+    { "equipo": "Mayorga F. C.", "jugador": "EMMANUEL HERNANDEZ", "goles": 2 },
+    { "equipo": "Real Madrid De Túmaco", "jugador": "JONATHAN GRUESO", "goles": 2 },
+    { "equipo": "Deportivo Pasto", "jugador": "ISAAC PATIÑO", "goles": 2 },
+    { "equipo": "Radi F. C. Ipiales", "jugador": "JUAN ESCOBAR", "goles": 2 },
+    { "equipo": "Real Madrid De Túmaco", "jugador": "SAMUEL TORRES", "goles": 2 },
+    { "equipo": "Aldrin Túmaco", "jugador": "JHONY RODRIGUEZ", "goles": 2 },
+    { "equipo": "Real Madrid De Túmaco", "jugador": "JEAN CARLOS GONZALES", "goles": 1 },
+    { "equipo": "Sporting Rio Real", "jugador": "NICOLAS NEIVA", "goles": 1 },
+    { "equipo": "Aldrin Túmaco", "jugador": "JEFRY SEVILLANO", "goles": 1 },
+    { "equipo": "Mayorga F. C.", "jugador": "LUIS DELGADO", "goles": 1 },
+    { "equipo": "Águilas F. C.", "jugador": "CRISTOPHER BENAVIDES", "goles": 1 },
+    { "equipo": "Real Madrid De Túmaco", "jugador": "MATIAS SEVILLANO", "goles": 1 },
+    { "equipo": "Sporting Rio Real", "jugador": "JUAN BURBANO", "goles": 1 },
+    { "equipo": "Aldrin Túmaco", "jugador": "ANDRES ENRIQUEZ", "goles": 1 },
+    { "equipo": "Mayorga F. C.", "jugador": "MATEO GAMEZ", "goles": 1 },
+    { "equipo": "Mayorga F. C.", "jugador": "ISAAC RAMIREZ", "goles": 1 },
+    { "equipo": "Independiente F. C.", "jugador": "JOSSE MIRANDA", "goles": 1 },
+    { "equipo": "Radi F. C. Ipiales", "jugador": "DARWIN MISNAZA", "goles": 1 },
+    { "equipo": "Sporting Rio Real", "jugador": "DANIEL BASTIDAS", "goles": 1 },
+    { "equipo": "Independiente F. C.", "jugador": "NICOLAS AZAIN", "goles": 1 },
+    { "equipo": "Independiente F. C.", "jugador": "DIEGO PEREZ", "goles": 1 },
+    { "equipo": "Aldrin Túmaco", "jugador": "JOHAN DAYRO", "goles": 1 },
+    { "equipo": "Alianza Sureña", "jugador": "ALAN CAJARES", "goles": 1 },
+    { "equipo": "Aldrin Túmaco", "jugador": "JUAN LANDAZURY", "goles": 1 },
+    { "equipo": "Águilas F. C.", "jugador": "NICOLAS DELGADO", "goles": 1 },
+    { "equipo": "Radi F. C. Ipiales", "jugador": "FELIPE VILLARREAL", "goles": 1 },
+    { "equipo": "Alianza Sureña", "jugador": "DANTE LUCERO", "goles": 1 },
+    { "equipo": "Águilas F. C.", "jugador": "RAMSES DIAZ", "goles": 1 },
+    { "equipo": "Deportivo Pasto", "jugador": "JHOJAN VALLEJO", "goles": 1 }
 ]
